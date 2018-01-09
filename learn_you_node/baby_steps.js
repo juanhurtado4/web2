@@ -1,7 +1,7 @@
 let strNumbersArr = process.argv.slice(2)
 
-let numberArr = strNumbersArr.map(stringNum => parseInt(stringNum));
-
-let sum = numberArr.reduce((accumulator, currentVal) => accumulator + currentVal);
+let sum = strNumbersArr.reduce((accu, currVal) => {
+    return parseInt(accu) + parseInt(currVal)
+});
 
 console.log(sum);
