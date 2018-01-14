@@ -25,9 +25,18 @@ let shoppingCart = {
         }
     },
 
-    
+    getTotal(value) {
+        let allItems = this.getAllItems()
+        return allItems.reduce((item, item2) => item.value + item2.value)
+    },
+        
+    getTotalQuantity() {
+        return getTotal('quantity');
+    },
 
-
+    getTotalPrice() {
+        return getTotal('price');
+    }
 };
 
 class Product {
