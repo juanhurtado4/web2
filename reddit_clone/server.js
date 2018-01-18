@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/post/new', (req, res) => {
-    res.render('post_new')
+    res.render('post_new', {pageTitle: 'Reddit Clone/new post'})
 })
 
 
