@@ -7,13 +7,20 @@ app.set('view engine', 'ejs');
 app.use(express.static('public')); // for css
 app.use(bodyPser.urlencoded({extended: true}));
 
-app.get('/', (req, res) => {
+app.get('/posts', (req, res) => {
     res.render('home', {pageTitle: 'Reddit Clone'})
 })
 
-app.get('/post/new', (req, res) => {
+app.get('/posts/new', (req, res) => {
     res.render('post_new', {pageTitle: 'Reddit Clone/new post'})
 })
+
+require('./controllers/posts.js')(app)
+
+
+
+
+
 
 
 app.listen('3000', () => {
