@@ -1,4 +1,4 @@
-let Post = require('../models/post')
+let Post = require('../models/post.js')
 
 module.exports = app => {
     app.post('/posts', (req, res) => {
