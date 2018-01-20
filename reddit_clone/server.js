@@ -20,6 +20,8 @@ require('./controllers/new.js')(app)
 
 require('./controllers/create.js')(app)
 
+require('./controllers/show.js')(app)
+
 app.listen('3000', () => {
     console.log('Server listening on port 3000')
 })
