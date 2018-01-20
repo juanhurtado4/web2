@@ -14,14 +14,9 @@ mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection 
 
 app.set("view engine", "ejs");
 
+require('./controllers/get_posts.js')(app)
 
-app.get('/posts', (req, res) => {
-    res.render('home', {pageTitle: 'Reddit Clone'})
-})
-
-app.get('/posts/new', (req, res) => {
-    res.render('post_new', {pageTitle: 'Reddit Clone/new post'})
-})
+require('./controllers/posts_new.js')(app)
 
 require('./controllers/posts.js')(app)
 
