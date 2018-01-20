@@ -14,11 +14,11 @@ mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection 
 
 app.set("view engine", "ejs");
 
-require('./controllers/get_posts.js')(app)
+require('./controllers/index.js')(app)
 
-require('./controllers/posts_new.js')(app)
+require('./controllers/new.js')(app)
 
-require('./controllers/posts.js')(app)
+require('./controllers/create.js')(app)
 
 app.listen('3000', () => {
     console.log('Server listening on port 3000')
