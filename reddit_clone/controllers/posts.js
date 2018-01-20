@@ -7,7 +7,7 @@ module.exports = app => {
 
         post.save().then((post) => {
             console.log(post)
-            return res.redirect('/posts/new')
+            res.redirect('/posts')
         }).catch((err) => {
             console.log(err.message)
         })
