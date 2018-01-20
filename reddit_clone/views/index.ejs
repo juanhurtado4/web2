@@ -1,3 +1,7 @@
 <% include partials/header %>
-<%= posts %>
+
+    <% for (post of posts) { %>
+        <li> <%= post %> </li>
+    <% } %>
+
 <% include partials/footer %>
