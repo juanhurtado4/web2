@@ -1,0 +1,16 @@
+{
+    "name": "testing_lesson",
+    "version": "1.0.0",
+    "description": "Learning to test with Mocha & Chai",
+    "main": "index.js",
+    "scripts": {
+        "test": "mocha **/*.test.js",
+        "test_watch": "nodemon --exec 'npm test'"
+    },
+    "author": "Juan Hurtado",
+    "license": "ISC",
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "mocha": "^5.0.0"
+    }
+}
