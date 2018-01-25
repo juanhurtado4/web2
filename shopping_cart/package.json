@@ -1,0 +1,24 @@
+{
+    "name": "shopping_cart",
+    "version": "1.0.0",
+    "description": "Shopping Cart exercise",
+    "main": "shopping_cart.js",
+    "scripts": {
+        "test": "mocha test_shopping_cart.js",
+        "test_watch": "nodemon --exec 'npm test'"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/juanhurtado4/web2.git"
+    },
+    "author": "Juan Hurtado",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/juanhurtado4/web2/issues"
+    },
+    "homepage": "https://github.com/juanhurtado4/web2#readme",
+    "devDependencies": {
+        "chai": "^4.1.2",
+        "mocha": "^5.0.0"
+    }
+}
