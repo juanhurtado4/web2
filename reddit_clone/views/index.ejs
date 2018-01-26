@@ -5,19 +5,25 @@
             <div class="col-sm-8 col-sm-offset-2">
                 <ul>
                     <% for (post of posts) { %>
-                    <li class="list-group-item">
-                        <div class="lead"> 
-                            <a href="/posts/<%=post.id%>" class='lead'> 
-                                <%= post.title%> 
+                        <li class="list-group-item">
+                            <div class="lead">
+                                <div class="text-right">
+                                    <%= post.subreddit %>
+                                </div>
+                                <a href="/posts/<%=post.id%>" class='lead'>
+                                    <%= post.title%>
+                                </a>
+                            </div>
+                            <a href="<%= post.url %>" target="_blank">
+
+                                <%= post.url %>
+
                             </a>
-                        </div>
-                        <a href="<%= post.url %>" target="_blank"><%= post.url %>
-                            <a>
-                    </li>
-                    <% } %>
+                        </li>
+                        <% } %>
                 </ul>
             </div>
         </div>
     </div>
 
-<% include partials/footer %>
+    <% include partials/footer %>
