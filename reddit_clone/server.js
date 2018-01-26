@@ -6,7 +6,7 @@ let app = express();
 
 app.set('view engine', 'ejs');
 app.use(express.static('public')); // for css
-app.use(bodyPser.urlencoded({extended: true}));
+app.use(bodyPser.urlencoded({ extended: true }));
 
 mongoose.connect('mongodb://localhost/27017');
 mongoose.set('debug', true);
@@ -21,6 +21,8 @@ require('./controllers/new.js')(app)
 require('./controllers/create.js')(app)
 
 require('./controllers/show.js')(app)
+
+require('./controllers/subreddit.js')(app)
 
 app.listen('3000', () => {
     console.log('Server listening on port 3000')
