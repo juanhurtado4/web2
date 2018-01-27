@@ -10,7 +10,7 @@ module.exports = app => {
             post.comments.unshift(comment)
             return post.save()
         }).then(post => {
-            res.redirect('/posts')
+            res.redirect(`/posts/${req.params.postId}`)
         }).catch(err => {
             console.log(err);
             res.redirect(`/posts`)
