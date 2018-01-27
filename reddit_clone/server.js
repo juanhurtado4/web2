@@ -26,6 +26,10 @@ require('./controllers/subreddit.js')(app)
 
 require('./controllers/comments.js')(app)
 
+require('./controllers/signup.js')(app)
+
+require('./controllers/auth.js')(app)
+
 app.listen('3000', () => {
     console.log('Server listening on port 3000')
 })
