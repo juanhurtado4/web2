@@ -2,14 +2,19 @@ const mocha = require('mocha');
 const expect = require('chai').expect;
 const { ShoppingCart, Product } = require('./shopping_cart')
 
+let item;
+let cart;
+beforeEach(() => {
+    item = new Product('chicken', 10, 1);
+    cart = new ShoppingCart();
+})
+
 describe('Testing Product', () => {
     it('should have a name', () => {
-        const item = new Product('chicken', 10, 1);
         expect(item.name).to.be.a('string');
         expect(item.name).to.equal('chicken');
     })
     it('should have a price', () => {
-        const item = new Product('chicken', 10, 1);
         expect(item.price).to.be.a('number');
         expect(item.price).to.equal(10);
     })
@@ -17,18 +22,17 @@ describe('Testing Product', () => {
 
 describe('Testing ShoppingCart', () => {
     it('Should return an array containing all items in cart', () => {
-        const cart = new ShoppingCart();
-        const newItem = new Product('chocolate', 4, 2)
         expect(cart.getAllItems()).to.be.a('array');
         expect(cart.getTotalQuantity()).to.be.a('number');
         expect(cart.getTotalQuantity()).to.equal(0);
-        cart.addItem(newItem);
+        cart.addItem(item);
         expect(cart.getTotalQuantity()).to.equal(1);
         const cartItem = cart.getAllItems()[0]
-        expect(cartItem.name).to.equal('chocolate')
+        expect(cartItem.name).to.equal('chicken')
     })
 })
 
+// TODO: Finish all test below
 it('Should return an array containing all items in cart');
 it('Should add a new item to the shopping cart');
 it('Should return the number of items in the cart');
