@@ -45,7 +45,20 @@ it('Should remove items from cart', () => {
     cart.removeItem(item)
     expect(cart.getTotalQuantity()).to.equal(0);
 });
+
 // Stretch challenges
-it('Should update the count of items in the cart');
-it('Should remove an item when its count is 0');
+it('Should update the count of items in the cart', () => {
+    expect(cart.getTotalQuantity()).to.equal(0);
+    cart.addItem(item);
+    expect(cart.getTotalQuantity()).to.equal(1);
+    expect(item.quantity).to.equal(1);
+    cart.increaseQuantity(item)
+    expect(cart.getTotalQuantity()).to.equal(2);
+    expect(item.quantity).to.equal(2);
+});
+
+it('Should remove an item when its count is 0', () => {
+
+});
+
 it('Should return the total cost of all items in the cart');
