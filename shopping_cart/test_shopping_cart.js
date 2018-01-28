@@ -23,19 +23,22 @@ describe('Testing Product', () => {
 describe('Testing ShoppingCart', () => {
     it('Should return an array containing all items in cart', () => {
         expect(cart.getAllItems()).to.be.a('array');
-        expect(cart.getTotalQuantity()).to.be.a('number');
-        expect(cart.getTotalQuantity()).to.equal(0);
-        cart.addItem(item);
-        expect(cart.getTotalQuantity()).to.equal(1);
-        const cartItem = cart.getAllItems()[0]
-        expect(cartItem.name).to.equal('chicken')
     })
 })
 
-// TODO: Finish all test below
-it('Should return an array containing all items in cart');
-it('Should add a new item to the shopping cart');
-it('Should return the number of items in the cart');
+it('Should add a new item to the shopping cart', () => {
+    cart.addItem(item);
+    const cartItem = cart.getAllItems()[0]
+    expect(cartItem.name).to.equal('chicken')
+});
+
+it('Should return the number of items in the cart', () => {
+    expect(cart.getTotalQuantity()).to.be.a('number');
+    expect(cart.getTotalQuantity()).to.equal(0);
+    cart.addItem(item);
+    expect(cart.getTotalQuantity()).to.equal(1);
+});
+
 it('Should remove items from cart');
 // Stretch challenges
 it('Should update the count of items in the cart');
