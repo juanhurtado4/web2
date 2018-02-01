@@ -18,8 +18,8 @@ UserSchema.pre('save', function(next) {
         this.createdAt = now;
     }
     bcrypt.genSalt(10, (err, salt) => {
-        bcrypt.hash(user.password, salt, (err, hash) => {
-            user.password = hash;
+        bcrypt.hash(this.password, salt, (err, hash) => {
+            this.password = hash;
             next();
         });
     });
