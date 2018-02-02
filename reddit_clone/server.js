@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const express = require('express');
 require('dotenv').config();
 const app = express();
+app.use(cookieParser());
 
 const checkAuth = (req, res, next) => {
     console.log("Checking authentication");
@@ -20,7 +21,6 @@ const checkAuth = (req, res, next) => {
 }
 app.use(checkAuth);
 
-app.use(cookieParser());
 app.set('view engine', 'ejs');
 app.use(express.static('public')); // for css
 app.use(bodyPser.urlencoded({ extended: true }));
