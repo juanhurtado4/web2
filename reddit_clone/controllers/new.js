@@ -1,6 +1,6 @@
 module.exports = app => {
-    const currentUser = req.user;
     app.get('/posts/new', (req, res) => {
+        const currentUser = req.user;
         res.render('new', { pageTitle: 'Reddit Clone/new post', currentUser: currentUser })
     })
 }
