@@ -6,6 +6,20 @@ const express = require('express');
 require('dotenv').config();
 const app = express();
 
+const checkAuth = (req, res, next) => {
+    console.log("Checking authentication");
+    if (typeof req.cookies === 'undefined' || req.cookies.nToken === 'undefined' || req.cookies.nToken === null) {
+        req.user = null;
+    } else {
+        var token = req.cookies.nToken;
+        var decodedToken = jwt.decode(token, { complete: true }) || {};
+        req.user = decodedToken.payload;
+    }
+
+    next()
+}
+app.use(checkAuth);
+
 app.use(cookieParser());
 app.set('view engine', 'ejs');
 app.use(express.static('public')); // for css
