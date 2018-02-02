@@ -1,5 +1,6 @@
 module.exports = app => {
     app.get('/sign-up', (req, res) => {
-        res.render('signup', { pageTitle: 'sign-up' })
+        const currentUser = req.user;
+        res.render('signup', { pageTitle: 'sign-up', currentUser: currentUser })
     })
 }
