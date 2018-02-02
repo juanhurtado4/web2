@@ -31,7 +31,7 @@ require('./controllers/comments.js')(app)
 
 require('./controllers/signup.js')(app)
 
-require('./controllers/auth.js')(app)
+require('./controllers/register.js')(app)
 
 require('./controllers/logout.js')(app)
 
