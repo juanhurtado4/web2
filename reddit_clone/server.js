@@ -1,10 +1,12 @@
+const cookieParser = require('cookie-parser');
+const bodyPser = require('body-parser');
+const jwt = require('jsonwebtoken');
+const mongoose = require('mongoose');
+const express = require('express');
 require('dotenv').config();
-let bodyPser = require('body-parser');
-let mongoose = require('mongoose');
-let express = require('express');
-let app = express();
+const app = express();
 
-
+app.use(cookieParser());
 app.set('view engine', 'ejs');
 app.use(express.static('public')); // for css
 app.use(bodyPser.urlencoded({ extended: true }));
