@@ -7,7 +7,8 @@ const UserSchema = new Schema({
     updatedAt: { type: Date },
     password: { type: String, select: false, required: true },
     username: { type: String, required: true },
-    posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }]
+    posts: [{ type: Schema.Types.ObjectId, ref: 'Post' }],
+    comments: [{ type: Schema.Types.ObjectId, ref: 'Comment' }] // testing
 });
 
 // Define the callback with a regular function to avoid problems with this
