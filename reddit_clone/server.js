@@ -33,6 +33,8 @@ require('./controllers/signup.js')(app)
 
 require('./controllers/auth.js')(app)
 
+require('./controllers/logout.js')(app)
+
 app.listen('3000', () => {
     console.log('Server listening on port 3000')
 })
