@@ -1,0 +1,19 @@
+{
+  "name": "dating_site",
+  "version": "1.0.0",
+  "description": "A new dating site focused on getting you out on dates",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanhurtado4/web2.git"
+  },
+  "author": "Juan Hurtado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanhurtado4/web2/issues"
+  },
+  "homepage": "https://github.com/juanhurtado4/web2#readme"
+}
