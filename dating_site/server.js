@@ -12,9 +12,7 @@ mongoose.connection.on('error', console.error.bind(console, 'MongoDB connection 
 
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res) => {
-    res.render(index, { pageTitle: 'A new dating website' })
-})
+require('./controllers/index')(app);
 
 app.listen('3000', () => {
     console.log('Server listening on port 3000');
