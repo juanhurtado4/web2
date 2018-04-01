@@ -10,7 +10,6 @@ const reset = () => {
     num.innerHTML = 0;
 };
 
-
 btn.addEventListener("mousedown", (e) => {
     addOne();
     num.classList.add("plus-ani")
@@ -29,5 +28,3 @@ btnReset.addEventListener("mousedown", (e) => {
 btnReset.addEventListener("mouseup", (e) => {
     num.classList.remove("reset-ani");
 })
-
-
